@@ -7,4 +7,3 @@ Demo online
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-121013?logo=githubpages)
 
----
