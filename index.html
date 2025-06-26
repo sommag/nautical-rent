@@ -1,10 +1,13 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NautiCal Rent - Noleggio Barche a Belvedere Marittimo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +15,8 @@
     <img src="img/logo.png" alt="Logo NautiCal Rent" class="logo">
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Le nostre barche</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#barche">Le nostre barche</a></li>
         <li><a href="#" onclick="openExcursion()">Escursioni</a></li>
         <li><a href="#" onclick="openModal()">Prenota</a></li>
         <li><a href="#contatti">Contatti</a></li>
@@ -23,79 +26,83 @@
 
   <section class="hero">
     <h2>Scopri la costa calabrese con NautiCal Rent</h2>
-    <p>Noleggia una barca a motore <strong>SENZA PATENTE</strong>  o vivi un'escursione al tramonto con aperitivo!</p>
+    <p>Noleggia una barca a motore <strong>SENZA PATENTE</strong> o vivi un'escursione al tramonto con aperitivo.</p>
     <a class="btn" href="#" onclick="openModal()">Prenota ora</a>
   </section>
 
-  <section class="services">
-    <h2>I nostri servizi</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="img/barca.jpg" alt="Barca senza patente">
-        <h3>Noleggio barche senza patente</h3>
-        <p>Guidi tu! Le nostre barche sono perfette per chi vuole vivere il mare in libertà, senza patente nautica.</p>
-      </div>
-      <div class="card">
-        <img src="img/tramonto.jpg" alt="Escursione al tramonto">
-        <h3>Escursioni al tramonto</h3>
-        <p>Rilassati con un tour guidato, aperitivo incluso, ammirando il tramonto sulla costa tirrenica.</p>
+<section class="services" id="barche">
+  <h2>I nostri servizi</h2>
+  <div class="cards-modern">
+    <div class="modern-card">
+      <div class="card-image" style="background-image: url('img/barca.jpg');"></div>
+      <div class="card-text">
+        <h3>Barche senza patente</h3>
+        <p>Perfette per chi desidera esplorare il mare in autonomia e sicurezza.</p>
       </div>
     </div>
-  </section>
+
+    <div class="modern-card">
+      <div class="card-image" style="background-image: url('img/tramonto.jpg');"></div>
+      <div class="card-text">
+        <h3>Escursioni al tramonto</h3>
+        <p>Tour guidati con skipper, aperitivo incluso e tramonti mozzafiato.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <section id="contatti" class="contatti">
     <h2>Contattaci</h2>
-    <p>📞 Telefono: <a href="tel:+393331234567">+39 375 8486661</a></p>
-    <p>📍 Ormeggio Altamarea, C.da Santa Litterata Belvedere Marittimo, Calabria</p>
+    <p>Telefono: <a href="tel:+393758486661">+39 375 8486661</a></p>
+    <p>Ormeggio Altamarea, C.da Santa Litterata, Belvedere Marittimo (CS)</p>
     <div class="social">
       <a href="https://www.instagram.com/nautical.rent" target="_blank">Instagram</a> |
       <a href="https://www.facebook.com/share/19tU4qRh5u/?mibextid=wwXIfr" target="_blank">Facebook</a>
     </div>
     <div class="mappa">
-  <iframe
-    src="https://www.google.com/maps?q=Ormeggio+Altamarea,+C.da+Santa+Litterata,+Belvedere+Marittimo&output=embed"
-    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-  </iframe>
-</div>
+      <iframe src="https://www.google.com/maps?q=Ormeggio+Altamarea,+C.da+Santa+Litterata,+Belvedere+Marittimo&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 NautiCal Rent - Belvedere Marittimo (CS) - Tutti i diritti riservati</p>
+    <p>© 2025 NautiCal Rent - Tutti i diritti riservati</p>
   </footer>
 
-  <!-- Modal Prenotazioni -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Seleziona il tuo servizio</h2>
-      <form onsubmit="sendToWhatsApp(event)">
-        <select id="tipo" name="tipo">
-          <option>Giornaliero 10:00-18:00</option>
-          <option>4 Ore 9:00-13:00</option>
-          <option>4 Ore 14:00-18:00</option>
-          <option>Escursione al tramonto con skipper e aperitivo</option>
-        </select><br><br>
+      <h2>Prenota il tuo servizio</h2>
+  <form onsubmit="sendToWhatsApp(event)">
+  <label for="tipo">Tipo di servizio:</label>
+  <select id="tipo" name="tipo" required>
+    <option>Giornaliero 10:00-18:00</option>
+    <option>4 Ore 9:00-13:00</option>
+    <option>4 Ore 14:00-18:00</option>
+    <option>Escursione al tramonto con skipper e aperitivo</option>
+  </select><br><br>
 
-        <label for="data">Data:</label>
-        <input type="date" id="data" name="data"><br><br>
+  <label for="data">Data:</label>
+  <input type="date" id="data" name="data" required><br><br>
 
-        <button type="submit">Invia richiesta</button>
-      </form>
+  <label for="note">Note (facoltative):</label>
+  <textarea id="note" name="note" rows="4" placeholder="Es. numero di persone, richieste particolari..." style="width: 100%; border-radius: 5px; padding: 8px; border: 1px solid #ccc;"></textarea><br><br>
+
+  <button type="submit">Invia richiesta</button>
+</form>
     </div>
   </div>
 
-  <!-- Modal Escursione -->
   <div id="excursion" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeExcursion()">&times;</span>
       <h2>Escursione al tramonto</h2>
-      <p>Partenza dall'Ormeggio Altamarea in serata. Visiteremo:</p>
       <ul>
-        <li>Cirella, con sosta panoramica sotto le rovine del borgo</li>
-        <li></li>
+        <li>Partenza da Ormeggio Altamarea</li>
+        <li>Visita panoramica a Cirella</li>
+        <li>2 ore di navigazione e relax</li>
+        <li>Aperitivo con prosecco e stuzzichini</li>
       </ul>
-      <p>Durata: circa 2 ore</p>
-      <p>Inclusi: stuzzichini, bottiglia di prosecco e vista sul tramonto</p>
       <div class="gallery">
         <img src="img/escursione tramonto.jpg" alt="Cirella">
         <img src="img/escursione2.jpg" alt="Isola di Dino">
@@ -125,200 +132,30 @@
       document.body.style.overflow = "auto";
     }
 
-    window.onclick = function(event) {
-      const modal = document.getElementById("modal");
-      const excursion = document.getElementById("excursion");
+   function sendToWhatsApp(event) {
+  event.preventDefault();
 
-      if (event.target === modal) {
-        closeModal();
-      }
+  const tipo = document.getElementById("tipo").value;
+  const data = document.getElementById("data").value;
+  const note = document.getElementById("note").value;
 
-      if (event.target === excursion) {
-        closeExcursion();
-      }
-    }
+  const numero = "393758486661";
+  let messaggio = `Ciao! Vorrei prenotare:\n- Servizio: ${tipo}\n- Data: ${data}`;
 
-    
-  // ... (funzioni openModal, closeModal, ecc.)
-
-  function sendToWhatsApp(event) {
-    event.preventDefault(); // ferma l'invio classico
-
-    const tipo = document.getElementById("tipo").value;
-    const data = document.getElementById("data").value;
-
-    const numero = "393758486661"; // ← Inserisci qui il tuo numero WhatsApp (senza +, spazi o simboli)
-
-    const messaggio = `Ciao! Vorrei prenotare:\n- Servizio: ${tipo}\n- Data: ${data}`;
-
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(messaggio)}`;
-    window.open(url, '_blank');
+  if (note.trim() !== "") {
+    messaggio += `\n- Note: ${note}`;
   }
 
-  // ... (resto delle funzioni e window.onclick)
-
-  </script>
-</body>
-=======
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NautiCal Rent - Noleggio Barche a Belvedere Marittimo</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <img src="img/logo.png" alt="Logo NautiCal Rent" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Le nostre barche</a></li>
-        <li><a href="#" onclick="openExcursion()">Escursioni</a></li>
-        <li><a href="#" onclick="openModal()">Prenota</a></li>
-        <li><a href="#contatti">Contatti</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Scopri la costa calabrese con NautiCal Rent</h2>
-    <p>Noleggia una barca a motore <strong>SENZA PATENTE</strong>  o vivi un'escursione al tramonto con aperitivo!</p>
-    <a class="btn" href="#" onclick="openModal()">Prenota ora</a>
-  </section>
-
-  <section class="services">
-    <h2>I nostri servizi</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="img/barca.jpg" alt="Barca senza patente">
-        <h3>Noleggio barche senza patente</h3>
-        <p>Guidi tu! Le nostre barche sono perfette per chi vuole vivere il mare in libertà, senza patente nautica.</p>
-      </div>
-      <div class="card">
-        <img src="img/tramonto.jpg" alt="Escursione al tramonto">
-        <h3>Escursioni al tramonto</h3>
-        <p>Rilassati con un tour guidato, aperitivo incluso, ammirando il tramonto sulla costa tirrenica.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contatti" class="contatti">
-    <h2>Contattaci</h2>
-    <p>📞 Telefono: <a href="tel:+393331234567">+39 375 8486661</a></p>
-    <p>📍 Ormeggio Altamarea, C.da Santa Litterata Belvedere Marittimo, Calabria</p>
-    <div class="social">
-      <a href="https://www.instagram.com/nautical.rent" target="_blank">Instagram</a> |
-      <a href="https://www.facebook.com/share/19tU4qRh5u/?mibextid=wwXIfr" target="_blank">Facebook</a>
-    </div>
-    <div class="mappa">
-  <iframe
-    src="https://www.google.com/maps?q=Ormeggio+Altamarea,+C.da+Santa+Litterata,+Belvedere+Marittimo&output=embed"
-    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-  </iframe>
-</div>
-  </section>
-
-  <footer>
-    <p>© 2025 NautiCal Rent - Belvedere Marittimo (CS) - Tutti i diritti riservati</p>
-  </footer>
-
-  <!-- Modal Prenotazioni -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Seleziona il tuo servizio</h2>
-      <form onsubmit="sendToWhatsApp(event)">
-        <select id="tipo" name="tipo">
-          <option>Giornaliero 10:00-18:00</option>
-          <option>4 Ore 9:00-13:00</option>
-          <option>4 Ore 14:00-18:00</option>
-          <option>Escursione al tramonto con skipper e aperitivo</option>
-        </select><br><br>
-
-        <label for="data">Data:</label>
-        <input type="date" id="data" name="data"><br><br>
-
-        <button type="submit">Invia richiesta</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Modal Escursione -->
-  <div id="excursion" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeExcursion()">&times;</span>
-      <h2>Escursione al tramonto</h2>
-      <p>Partenza dall'Ormeggio Altamarea in serata. Visiteremo:</p>
-      <ul>
-        <li>Cirella, con sosta panoramica sotto le rovine del borgo</li>
-        <li></li>
-      </ul>
-      <p>Durata: circa 2 ore</p>
-      <p>Inclusi: stuzzichini, bottiglia di prosecco e vista sul tramonto</p>
-      <div class="gallery">
-        <img src="img/escursione tramonto.jpg" alt="Cirella">
-        <img src="img/escursione2.jpg" alt="Isola di Dino">
-        <img src="img/escursione3.jpg" alt="Tramonto in barca">
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openModal() {
-      document.getElementById("modal").style.display = "block";
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-      document.body.style.overflow = "auto";
-    }
-
-    function openExcursion() {
-      document.getElementById("excursion").style.display = "block";
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeExcursion() {
-      document.getElementById("excursion").style.display = "none";
-      document.body.style.overflow = "auto";
-    }
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(messaggio)}`;
+  window.open(url, '_blank');
+}
 
     window.onclick = function(event) {
       const modal = document.getElementById("modal");
       const excursion = document.getElementById("excursion");
-
-      if (event.target === modal) {
-        closeModal();
-      }
-
-      if (event.target === excursion) {
-        closeExcursion();
-      }
+      if (event.target === modal) closeModal();
+      if (event.target === excursion) closeExcursion();
     }
-
-    
-  // ... (funzioni openModal, closeModal, ecc.)
-
-  function sendToWhatsApp(event) {
-    event.preventDefault(); // ferma l'invio classico
-
-    const tipo = document.getElementById("tipo").value;
-    const data = document.getElementById("data").value;
-
-    const numero = "393758486661"; // ← Inserisci qui il tuo numero WhatsApp (senza +, spazi o simboli)
-
-    const messaggio = `Ciao! Vorrei prenotare:\n- Servizio: ${tipo}\n- Data: ${data}`;
-
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(messaggio)}`;
-    window.open(url, '_blank');
-  }
-
-  // ... (resto delle funzioni e window.onclick)
-
   </script>
 </body>
->>>>>>> fb5a22cac1ab7dc55f3556ac6945ae101fcc19e3
 </html>
