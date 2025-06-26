@@ -1,3 +1,19 @@
+**NautiCal Rent** è un sito web vetrina sviluppato per promuovere i servizi di noleggio barche senza patente ed escursioni guidate lungo la costa tirrenica calabrese. Il sito consente agli utenti di scoprire l’offerta, visualizzare foto, contattare facilmente l’attività e inviare richieste di prenotazione tramite WhatsApp.
+
+## Tecnologie utilizzate
+
+- HTML5 per la struttura semantica
+- CSS3 per il layout, l’estetica e le animazioni
+- JavaScript per la gestione delle modali, l’invio delle prenotazioni e le interazioni dinamiche
+- Google Fonts per una tipografia chiara e professionale
+
+
+## Prossimi miglioramenti
+
+- Integrazione di una vera e propria galleria dinamica
+- Aggiunta di video o testimonianze
+- Possibilità di gestione delle prenotazioni via backend
+
 Demo online
 
 [Visualizza il sito su GitHub Pages](https://sommag.github.io/nautical-rent/)
